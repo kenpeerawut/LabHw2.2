@@ -35,11 +35,11 @@
             <legend>ข้อมูลเข้าสู่ระบบ</legend>
             <label for="fname">Username:</label><br>
             <input type="text" id="fname" name="fname" ><br>
-            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8 ตัวขึ้นไป</i><br><br>
+            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i><br><br>
 
             <label for="pwd">Password:</label><br>
-            <input type="password" id="pwd" name="pwd"><br>
-            <i>ประกอบด้วยอักขระอะไรก็ได้8 ตัวขึ้นไป</i>
+            <input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
 
         </fieldset>
 
@@ -63,7 +63,7 @@
             <input type="date" id="date" name="date"><br>
 
             <label for="member">จำนวนผู้เดินทาง:</label>
-            <input type="text" id="member" name="member" size="3" ><br>
+            <input type="text" id="member" name="member" size="3" pattern="[1-10]+" ><br>
 
             <label for="type">เน้นการท่องเที่ยวแบบใด?:</label><br>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="ช้อปปิ้ง" >
@@ -78,7 +78,7 @@
 
     </from><br>
     <label for="rule">ยอมรับเงื่อนไขและข้อตกลง</label>
-    <input type="radio" id="I agree" name="I agree" value="I agree" placeholder="I agree">
+    <input type="radio" id="I agree" name="I agree" value="I agree" placeholder="I agree" checked="cheaked">
     <label for="I agree">I agree</label>
     <input type="radio" id="I disagree" name="I disagree" value="I disagree">
     <label for="I disagree">I disagree</label>
