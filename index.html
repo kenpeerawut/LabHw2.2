@@ -13,14 +13,19 @@
         <legend>ข้อมูลทั่วไป</legend> 
         <label for="fname">ชื่อ-สกุล:</label><br>
         <input type="text" id="fname" name="fname" placeholder="กรอกชื่อ-สกุล"> *<br>
+
         <label for="email">Email:</label><br>
         <input type="text" id="email" name="email" > *<br>
+
         <label for="phone">โทรศัพท์:</label><br>
         <input type="tel" id="phone" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required value="+66"> *<br>
-        <label for="phone">ที่อยู่:</label><br>
+
+        <label for="place">ที่อยู่:</label><br>
         <textarea name="message" rows="4" cols="30"> </textarea><br>
+
         <label for="pin">รหัสไปรษณีย์:</label>
-         <input type="text" id="pin" name="pin" size="5"><br> 
+        <input type="text" id="pin" name="pin" size="5"><br> 
+
         <label for="myfile">รูปผู้จอง:</label>
         <input type="file" id="myfile" name="myfile"><br><br>
     </fieldset><br>
@@ -31,6 +36,7 @@
             <label for="fname">Username:</label><br>
             <input type="text" id="fname" name="fname" ><br>
             <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8 ตัวขึ้นไป</i><br><br>
+
             <label for="pwd">Password:</label><br>
             <input type="password" id="pwd" name="pwd"><br>
             <i>ประกอบด้วยอักขระอะไรก็ได้8 ตัวขึ้นไป</i>
@@ -42,6 +48,7 @@
     <from>
         <fieldset>
             <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+
             <label for="country">แพคเก็จทัวร์:</label>
             <select id="country" name="country">
               <option value="volvo">--Select--</option>
@@ -50,13 +57,32 @@
               <option value="norway">norway</option>
               <option value="switzerland">switzerland</option>
               <option value="nederland">nederland</option>
-            </select>
-           
-           
+            </select><br>
 
+            <label for="date">วันที่เดินทาง:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <label for="member">จำนวนผู้เดินทาง:</label>
+            <input type="text" id="member" name="member" size="3" ><br>
+
+            <label for="type">เน้นการท่องเที่ยวแบบใด?:</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="ช้อปปิ้ง" >
+            <label for="vehicle1"> ช้อปปิ้ง</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="ธรรมชาติ">
+            <label for="vehicle2"> ธรรมชาติ</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="ทะเล" >
+            <label for="vehicle3"> ทะเล</label><br><br>
+        
         </fieldset>
 
+
     </from><br>
+    <label for="rule">ยอมรับเงื่อนไขและข้อตกลง</label>
+    <input type="radio" id="I agree" name="I agree" value="I agree" placeholder="I agree">
+    <label for="I agree">I agree</label>
+    <input type="radio" id="I disagree" name="I disagree" value="I disagree">
+    <label for="I disagree">I disagree</label>
+    <input type="submit" value="จอง">
       
 </body>
 </html>
