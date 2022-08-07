@@ -6,51 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+ 
 <body>
-    <h2>แบบฟอร์มจองทัวร์</h2>
-    <form action="/action_page.php">
-       <fieldset>
-        <legend>ข้อมูลทั่วไป</legend> 
-        <label for="fname">ชื่อ-สกุล:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="กรอกชื่อ-สกุล"> *<br>
+  
+  <div>
+    <fieldset>
+      <h2>แบบฟอร์มจองทัวร์</h2>
+      <form action="/action_page.php">
+        <fieldset>
+          <legend>ข้อมูลทั่วไป</legend> 
+          <label for="fname">ชื่อ-สกุล:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="กรอกชื่อ-สกุล"> *<br>
 
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" > *<br>
+          <label for="email">Email:</label><br>
+          <input type="text" id="email" name="email" > *<br>
 
-        <label for="phone">โทรศัพท์:</label><br>
-        <input type="tel" id="phone" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required value="+66"> *<br>
+          <label for="phone">โทรศัพท์:</label><br>
+          <input type="tel" id="phone" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required value="+66"> *<br>
 
-        <label for="place">ที่อยู่:</label><br>
-        <textarea name="message" rows="4" cols="30"> </textarea><br>
+          <label for="place">ที่อยู่:</label><br>
+          <textarea name="message" rows="4" cols="30"> </textarea><br>
 
-        <label for="pin">รหัสไปรษณีย์:</label>
-        <input type="text" id="pin" name="pin" size="5"><br> 
+          <label for="pin">รหัสไปรษณีย์:</label>
+          <input type="text" id="pin" name="pin" size="5" pattern="[0-9]{5}"><br> 
 
-        <label for="myfile">รูปผู้จอง:</label>
-        <input type="file" id="myfile" name="myfile"><br><br>
-    </fieldset><br>
+          <label for="myfile">รูปผู้จอง:</label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+        </fieldset><br>
     
-    <from>
+        <from>
         <fieldset>
             <legend>ข้อมูลเข้าสู่ระบบ</legend>
             <label for="fname">Username:</label><br>
-            <input type="text" id="fname" name="fname" ><br>
+            <input type="text" id="fname" name="fname" pattern="[0-9a-zA-Z]*8" ><br>
             <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i><br><br>
 
             <label for="pwd">Password:</label><br>
-            <input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br>
+            <input type="password" id="pwd" name="pwd" pattern="[0-9a-zA-Z].{8,}"><br>
             <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
-
         </fieldset>
 
-    </from><br>
+        </from><br>
 
-    <from>
-        <fieldset>
-            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+        <from>
+            <fieldset>
+             <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
 
-            <label for="country">แพคเก็จทัวร์:</label>
-            <select id="country" name="country">
+             <label for="country">แพคเก็จทัวร์:</label>
+             <select id="country" name="country">
               <option value="volvo">--Select--</option>
               <option value="japan">japan</option>
               <option value="taiwan">taiwan</option>
@@ -83,6 +86,8 @@
     <input type="radio" id="I disagree" name="I disagree" value="I disagree">
     <label for="I disagree">I disagree</label>
     <input type="submit" value="จอง">
-      
+    </fieldset>
+  </div>
+
 </body>
 </html>
